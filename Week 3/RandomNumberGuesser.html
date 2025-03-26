@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <script>
+        let mystery = Math.floor(Math.random() * 1000 + 1);
+        let guess = parseInt(prompt("It's less than 1000.\nEnter your guess number here: "));
+
+        while (guess !== mystery)
+        {
+            if (guess < mystery) {guess = parseInt(prompt("Try again, but go higher"))}
+            
+            else if (guess > mystery) {guess = parseInt(prompt("Try again, but go lower"))}
+            
+            else {alert("You guessed " + guess + "\nYou got it right!\nIt was " + mystery)};
+        }   
+        
+        alert("You guessed " + guess + "\nYou got it right!\nIt was " + mystery);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /* let age = parseInt(prompt("Enter your age"));
+
+        if (age >= 18 && age < 100) {alert("You're old enough to vote")}
+        else if (age >= 100) {alert("Wow you're old!")}
+        else {alert("You're too young to vote")}; */
+    </script>
+</body>
+</html>
