@@ -1,0 +1,34 @@
+<!DOCTYPE HTML> 
+<!-- Ryan Blackwell 4/2/25--> 
+<html lang="en"> 
+    <head> 
+        <title> Week 4 Extra Credit </title>
+        <meta charset= "utf-8">
+    </head>
+<script>
+    "use strict";
+    //Wanted to test something from C# and continually prompt the user to enter a new password until the requirements are met.
+    //Sorry if this is an issue to grade I just wanted to see if this works and know if it looks right.
+    let password;
+    do {
+        password = prompt("Please enter a new password");
+        
+        //Basically saying if any of the password requirements aren't met execute following code
+        if (!(password.length >= 8 && (password.match(/[A-Z]/)) && password.match(/[a-z]/) && password.match(/\d/))) {
+            if (password.length < 8) { alert("Password is too short, it must be 8 characters or longer.") }
+            if (!(password.match(/[A-Z]/))) { alert("Password must contain at least one capital letter.") }
+            if (!(password.match(/[a-z]/))) { alert("Password must contain at least one lowercase letter.") }
+            if (!(password.match(/\d/))) { alert("Password must contain at least one digit.") }
+        }
+
+    } while (!(password.length >= 8 && (password.match(/[A-Z]/)) && password.match(/[a-z]/) && password.match(/\d/)))
+
+    alert("Secret Unlocked");
+    console.log("The secret is that Cedar Waxwings are one of my top 5 birds. I like the drunk boys what can I say?");
+
+</script>
+
+<body>
+    <h1>  Hi, I am just testing some js code here. Click F12 to see the console window.  </h1>
+</body>
+</html>
