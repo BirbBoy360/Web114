@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Week 5 Extra Credit</title>
+</head>
+
+<script>
+    //@author Ryan Blackwell
+    //4/9/2025
+
+    let keepAdding = true;
+    let itemName;
+    let itemPrice;
+    let total = 0;
+
+    // Loop to add items (using do-while)
+    do {
+        itemName = prompt("Enter item name (or 'done' to finish): ");
+        if (itemName.toLowerCase() !== "done") {
+            itemPrice = Number(prompt("Enter price"));
+            total += itemPrice;
+        }
+        else {
+            keepAdding = false; // Exit loop when "done" is entered
+        }
+    } while (keepAdding);
+
+    let discount = .8; //Effectively 20% discount
+    if (total > 100) {
+        total *= discount;
+    }
+  
+    console.log(`You received a discount of ${discount.toFixed(2)}!`);
+    console.log(`Your final total is: ${total.toFixed(2)}`);
+
+</script>
+
+<body>
+    Testing code, check F12.
+</body>
+</html>
