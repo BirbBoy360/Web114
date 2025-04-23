@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <h1 id="titleText">Cool Text Colors .net</h1>
+    <p id="colorName">This color is... </p>
+    <button id="colorButton">Cycle</button><button id="randButton">Randomize</button>
+    <script>
+        "use strict";
+        const titleText = document.getElementById("titleText");
+        const colorName = document.getElementById("colorName");
+        const colButton = document.getElementById("colorButton");
+        const randButton = document.getElementById("randButton");
+        let counterVar = 0;
+        let newColor = "#000";
+        let nameVar = "";
+
+        document.body.style.backgroundColor = "#000";
+        document.body.style.textAlign = "center";
+        document.body.style.paddingTop = "15rem";
+        colorName.style.color = "#FFF";
+        titleText.style.color = "#FFF";
+
+        colButton.addEventListener("click", function cycle() {
+            colorName.textContent = "This color is "; 
+            ++counterVar;
+            switch (counterVar) {
+                case 0:
+                    alert("ERROR 0");
+                    break;
+                case 1:
+                    newColor = "#F00";
+                    nameVar = "red";
+                    break;
+                case 2:
+                    newColor = "#FFA500";
+                    nameVar = "orange";
+                    break;
+                case 3:
+                    newColor = "#FF0";
+                    nameVar = "yellow";
+                    break;
+                case 4:
+                    newColor = "#0F0";
+                    nameVar = "green";
+                    break;
+                case 5:
+                    newColor = "#0FA";
+                    nameVar = "blue-green";
+                    break;
+                case 6:
+                    newColor = "#00F";
+                    nameVar = "blue";
+                    break;
+                case 7:
+                    newColor = "#F0F";
+                    nameVar = "purple";
+                    counterVar = 0;
+                    break;
+                default:
+                    alert("ERROR " + counterVar);
+                    break;
+            }// end switch
+
+            nameVar += ".";
+            colorName.textContent += nameVar; 
+            titleText.style.color = newColor;
+
+        })// end cycle function
+
+        randButton.addEventListener("click", function randomize() {
+            let rando = "#" + Math.floor(Math.random() * 16777215).toString(16);
+            titleText.style.color = rando;
+            colorName.textContent = "This color is random!";
+        })// end randomize function
+
+    </script>
+</body>
+</html>

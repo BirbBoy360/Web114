@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <h1 id="titleText">Cool Text Colors .net</h1>
+    <p id="colorName">This color is... </p>
+    <button id="colorButton">Send help.</button>
+    <script>
+        const colButton = document.getElementById("colorButton");
+        colButton.addEventListener("click", function () {
+            let rando = "#" + Math.floor(Math.random() * 16777215).toString(16);
+            document.body.style.backgroundColor = rando;
+        })
+        
+        </script>
+</body >
+</html >
