@@ -1,0 +1,37 @@
+﻿<!--Ryan Blackwell 4/13/25-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Week 7 Project</title>
+</head>
+<script>
+    let count = 0;
+    let total = 0;
+    let username = prompt("Enter your name:");
+    getTotal();
+    let gas = calcGasAvg();
+    confirm(`${username}\'s average weekly gas bill is ${gas.toFixed(2)}`);
+
+
+    function getTotal() {
+        let weeklyGas = 0;
+        do {
+            weeklyGas = prompt("Please enter your weekly gas totals."
+                + " Enter - 1 when done.");
+            if (weeklyGas != -1) {
+                total += parseFloat(weeklyGas);
+                ++count;
+            }
+        } while (weeklyGas != -1)
+    }
+
+    function calcGasAvg() {
+        let avg = total / count;
+        return avg;
+    }
+</script>
+<body>
+    Testing code, F12 isn't needed for this one.
+</body>
+</html>
