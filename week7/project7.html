@@ -1,4 +1,4 @@
-﻿<!--Ryan Blackwell 04/23/25-->
+﻿<!--Ryan Blackwell 04/28/25-->
 <!DOCTYPE html>
 
 <html lang="en">
@@ -8,23 +8,49 @@
    
 </head>
 <body>
-    <header>Questions</header>
-    <ol id="thisOne">
+    <h1>Questions</h1>
+    <ol>
         <li>
             Why is the JavaScript textContent property safer than innerHTML?
-            <ul><li>The old innerHTML method allowed the actual HTML code to be changed which allowed code to be input and executed by anyone. The textContent property only changes the text stored inside the element which doesn't allow code to be executed.</li></ul>
+            <ul>
+                <li>
+                    The old innerHTML method allowed the actual HTML code to be
+                    changed which allowed code to be input and executed by anyone.
+                    The textContent property only changes the text stored inside
+                    the element which doesn't allow code to be executed.
+                </li>
+            </ul>
         </li>
         <li>
-            What is the relationship between an HTML attribute and a corresponding DOM property? (what is the connection to JavaScript)
-            <ul><li>Using the DOM method, HTML attributes are essentially properties of the "document" object. This allows them to be targetted with text like: document.body.</li>
-            <li>The individual properties of these attributes like style or textContent can be targetted like: document.body.style.backgroundColor.</li></ul>
+            What is the relationship between an HTML attribute and a
+            corresponding DOM property? (what is the connection to JavaScript)
+            <ul>
+                <li>
+                    Using the DOM method, HTML attributes are essentially
+                    properties of the "document" object. This allows them to be
+                    targeted with text like: document.body.
+                </li>
+                <li>
+                    The individual properties of these attributes like style or
+                    textContent can be targeted like:
+                    document.body.style.backgroundColor.
+                </li>
+            </ul>
         </li>
     </ol>
-    <ul id="thisOne">sdasd <li>sdasdas</li> </ul>
+
     <h1>To-Do List</h1>
-    <input type="text" id="taskInput"/>
+    <input type="text" id="taskInput" />
     <button id="addTaskBtn">Add Task</button>
     <ul id="taskList"></ul>
-     <script src="project7.js"></script>
+
+    <!-- Alternative Version that applies or removes strikeout.
+        Please disregard the horrible naming conventions. -->
+    <h1>To-Do List V.2</h1>
+    <input type="text" id="taskInput2" />
+    <button id="addTaskBtn2">Add Task</button>
+    <ul id="taskList2"></ul>
+
+    <script src="project7.js"></script>
 </body>
 </html>
